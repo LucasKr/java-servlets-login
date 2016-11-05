@@ -24,5 +24,8 @@ create table users(
   userFirstName varchar(255),
   email varchar(255)
 );
-  
+
+insert into users(username, keypass, userFirstName, email) values ('lks', '123', 'Lucas', 'lucas@lucas.com.br');
+insert into users(username, keypass, userFirstName, email) values ('lks2', '123', 'Kruger', 'lucas@kruger.com.br');
+
 ```
