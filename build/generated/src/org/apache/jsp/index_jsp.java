@@ -52,7 +52,18 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </head>\n");
       out.write("    <body>\n");
       out.write("        <h1> Hello!!! Be free to go away! :O </h1>\n");
+      out.write("        ");
+ 
+            String a = "";
+            if(request.getAttribute("error") != null) {
+                a = (String) request.getAttribute("error");
+            }
+        
+      out.write("\n");
       out.write("        <form action=\"ValidadorLogin\" method=\"get\">\n");
+      out.write("            <h2 style=\"color: red;\">");
+      out.print(a);
+      out.write("</h2>\n");
       out.write("            <button type=\"submit\" class=\"btn btn-primary\">Go and login!</button>\n");
       out.write("        </form>\n");
       out.write("    </body>\n");

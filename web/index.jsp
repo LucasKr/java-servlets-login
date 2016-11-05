@@ -9,7 +9,14 @@
     </head>
     <body>
         <h1> Hello!!! Be free to go away! :O </h1>
+        <% 
+            String a = "";
+            if(request.getAttribute("error") != null) {
+                a = (String) request.getAttribute("error");
+            }
+        %>
         <form action="ValidadorLogin" method="get">
+            <h2 style="color: red;"><%=a%></h2>
             <button type="submit" class="btn btn-primary">Go and login!</button>
         </form>
     </body>
